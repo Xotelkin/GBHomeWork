@@ -2,8 +2,9 @@
 int size = 10;
 double [] array = new double[size];
 FillAray(array);
-double Diff = FoundMax(array) - FoundMin(array);
-Console.WriteLine("[{0}]", string.Join(" ", array));
+(double, double) result = FoundMinMax(array);
+double Diff = result.Item1 - result.Item2;
+Console.WriteLine("[{0}]", string.Join("; ", array));
 Console.WriteLine($"Разница между максимальным и минимальным элементом массива равна: {Diff}");
 
 
@@ -13,24 +14,17 @@ void FillAray(double [] array)
         array[i] = Math.Round(new Random().Next(-10, 10) + new Random().NextDouble(), 2);
 }
        
-double FoundMax(double [] array)
+(double, double) FoundMinMax(double [] array)
 {
    double Max = array[0];
-   for (int i = 0; i < size; i++)
+   double Min = array[0];
+   for (int i = 1; i < size; i++)
    {
     if (array[i] > Max)
         Max = array[i];
-   }
-   return Max;
-}
-
-double FoundMin(double [] array)
-{
-   double Min = array[0];
-   for (int i = 0; i < size; i++)
-   {
     if (array[i] < Min)
         Min = array[i];
    }
-   return Min;
+   return (Max, Min);
 }
+
