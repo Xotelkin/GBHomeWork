@@ -29,8 +29,8 @@ string SearchPoint (double b1, double b2, double k1, double k2)
 
 
 
-int Promt (string message)
+double Promt (string message)
 {
     Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
+    return Convert.ToDouble(Console.ReadLine());
 }
