@@ -39,6 +39,6 @@ void ArithmeticMeanColumn (int [, ] array)
                 {
                     summ += array[i, j];
                 }
-                Console.WriteLine($"Cреднее арифметическое элементов {j + 1} столбца = {summ / array.GetLength(0)}");
+                Console.WriteLine($"Cреднее арифметическое элементов {j + 1} столбца = {Math.Round(summ / array.GetLength(0), 1)}");
             }
 }
