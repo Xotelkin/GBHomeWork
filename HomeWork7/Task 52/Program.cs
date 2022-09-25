@@ -34,7 +34,7 @@ void ArithmeticMeanColumn (int [, ] array)
 {
     for (int j = 0; j < array.GetLength(1); j++) 
             {
-                float summ = 0;
+                int summ = 0;
                 for (int i = 0; i < array.GetLength(0); i++)
                 {
                     summ += array[i, j];
