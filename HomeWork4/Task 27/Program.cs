@@ -2,7 +2,7 @@
 Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int number = Proverka(num);
-int Summa = Calculation(ProvOtric(number));
+int Summa = Calculation(Proverka(number));
 Console.WriteLine(Summa);
 
 int Proverka(int a)
